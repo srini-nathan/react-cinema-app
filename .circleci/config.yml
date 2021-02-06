@@ -10,8 +10,8 @@ version: 2.1
             name: show current branch
             command: echo ${CURRENT_BRANCH}
         - restore_cache:
-            key:
-              - app-{{checksum "package.json"}}
+            keys:
+              - app-{{ checksum "package.json" }}
               - app-
         - run:
             name: Install dependencies
